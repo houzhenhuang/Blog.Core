@@ -1,0 +1,2 @@
+# Blog.Core
+ Blog.Core

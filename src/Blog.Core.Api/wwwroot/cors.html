@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Blog.Core</title>
+    <script src="https://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <style>
+        div {
+            margin: 10px;
+            word-wrap: break-word;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#jsonp").click(function () {
+                $.getJSON("api/Login/jsonp?callback=?", function () {
+                    $("#data-jsonp").html("数据: " + data.value);
+                });
+            })
+        });
+    </script>
+</head>
+<body>
+    <h3>通过JsonP实现跨域请求</h3>
+    <button id="jsonp">发送一个 GET </button>
+    <div id="data-jsonp"></div>
+    <hr />
+</body>
+</html>
